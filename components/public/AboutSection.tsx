@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import type { Profile } from '@/types'
 
 const skills = [
-  'Next.js', 'React', 'TypeScript', 'Node.js', 'PostgreSQL',
-  'Supabase', 'Tailwind CSS', 'Python', 'Git', 'REST APIs',
+  'Python', 'TensorFlow', 'PyTorch', 'NumPy', 'Pandas',
+  'YOLO Models', 'Machine Learning', 'Deep Learning', 'SQL', 'Next.js',
 ]
 
 export default function AboutSection({ profile }: { profile: Profile }) {
@@ -96,8 +96,8 @@ export default function AboutSection({ profile }: { profile: Profile }) {
               {/* Quick stats */}
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Projects Built', value: '10+' },
-                  { label: 'Technologies', value: '15+' },
+                  { label: 'Models Trained', value: '15+' },
+                  { label: 'Technologies', value: '12+' },
                   { label: 'GitHub Repos', value: '20+' },
                   { label: 'Coffee/day', value: '3☕' },
                 ].map((stat) => (

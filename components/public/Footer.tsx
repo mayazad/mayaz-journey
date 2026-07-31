@@ -19,7 +19,7 @@ export default function Footer() {
               Mayaz<span className="text-indigo-500">.</span>
             </Link>
             <p className="mt-3 text-sm text-slate-500 leading-relaxed max-w-xs">
-              Full-stack developer building fast, reliable web applications. Open to
+              AI Engineer building intelligent models and data-driven solutions. Open to
               collaborations and new opportunities.
             </p>
           </div>
