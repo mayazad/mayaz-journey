@@ -17,27 +17,27 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'Md Adnan Hossain Mayaz — Full-Stack Developer',
+    default: 'Md Adnan Hossain Mayaz — AI Engineer',
     template: '%s | Mayaz',
   },
   description:
-    'Personal portfolio of Md Adnan Hossain Mayaz — a full-stack developer building fast, reliable web apps with Next.js, React, and Supabase.',
-  keywords: ['Mayaz', 'Full-Stack Developer', 'Next.js', 'React', 'Supabase', 'Portfolio', 'Bangladesh'],
+    'Personal portfolio of Md Adnan Hossain Mayaz — an AI Engineer building intelligent models and data-driven solutions.',
+  keywords: ['Mayaz', 'AI Engineer', 'Machine Learning', 'Deep Learning', 'Portfolio', 'Bangladesh'],
   authors: [{ name: 'Md Adnan Hossain Mayaz', url: 'https://github.com/mayazad' }],
   creator: 'Md Adnan Hossain Mayaz',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    title: 'Md Adnan Hossain Mayaz — Full-Stack Developer',
+    title: 'Md Adnan Hossain Mayaz — AI Engineer',
     description:
-      'Personal portfolio of Md Adnan Hossain Mayaz — a full-stack developer building fast, reliable web apps.',
+      'Personal portfolio of Md Adnan Hossain Mayaz — an AI Engineer building intelligent models and data-driven solutions.',
     siteName: 'Mayaz Portfolio',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Mayaz Portfolio' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Md Adnan Hossain Mayaz — Full-Stack Developer',
+    title: 'Md Adnan Hossain Mayaz — AI Engineer',
     description: 'Personal portfolio of Md Adnan Hossain Mayaz.',
     images: ['/og-image.png'],
   },
@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
-      <body className="font-inter antialiased bg-[#0a0a0f] text-white">
+      <body className="font-inter antialiased bg-[#0a0a0f] text-white overflow-x-hidden">
         {children}
       </body>
     </html>
