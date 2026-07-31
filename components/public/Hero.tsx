@@ -171,12 +171,12 @@ export default function Hero({ profile }: { profile: Profile }) {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - hidden on mobile to prevent overlap */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1"
         >
           <span className="text-xs text-slate-600">scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-indigo-500/40 to-transparent animate-pulse" />
