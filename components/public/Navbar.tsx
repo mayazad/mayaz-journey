@@ -56,9 +56,18 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className="text-sm text-slate-300 hover:text-white transition-colors relative group"
+                onClick={(e) => {
+                  if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                    e.preventDefault()
+                    const id = link.href.replace('/#', '')
+                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+                    // Also update the URL without triggering a page reload
+                    window.history.pushState(null, '', `/#${id}`)
+                  }
+                }}
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-indigo-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full" />
               </Link>
             </li>
           ))}
@@ -86,6 +95,13 @@ export default function Navbar() {
           </a>
           <Link
             href="/#contact"
+            onClick={(e) => {
+              if (window.location.pathname === '/') {
+                e.preventDefault()
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                window.history.pushState(null, '', `/#contact`)
+              }
+            }}
             className="ml-2 px-4 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition-all duration-200 hover:shadow-lg hover:shadow-indigo-500/25"
           >
             Hire Me
@@ -113,7 +129,18 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => {
+                  setMobileOpen(false)
+                  if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                    e.preventDefault()
+                    const id = link.href.replace('/#', '')
+                    // Small delay to allow the mobile menu to close before scrolling
+                    setTimeout(() => {
+                      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+                      window.history.pushState(null, '', `/#${id}`)
+                    }, 50)
+                  }
+                }}
                 className="text-slate-300 hover:text-white text-base transition-colors block py-1"
               >
                 {link.label}
