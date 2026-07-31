@@ -60,11 +60,7 @@ export default function Navbar() {
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault()
                     const id = link.href.replace('/#', '')
-                    const el = document.getElementById(id)
-                    if (el) {
-                      const y = el.getBoundingClientRect().top + window.scrollY - 80
-                      window.scrollTo({ top: y, behavior: 'smooth' })
-                    }
+                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
                     window.history.pushState(null, '', `/#${id}`)
                   }
                 }}
@@ -101,11 +97,7 @@ export default function Navbar() {
             onClick={(e) => {
               if (window.location.pathname === '/') {
                 e.preventDefault()
-                const el = document.getElementById('contact')
-                if (el) {
-                  const y = el.getBoundingClientRect().top + window.scrollY - 80
-                  window.scrollTo({ top: y, behavior: 'smooth' })
-                }
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                 window.history.pushState(null, '', `/#contact`)
               }
             }}
@@ -141,13 +133,8 @@ export default function Navbar() {
                   if (link.href.startsWith('/#') && window.location.pathname === '/') {
                     e.preventDefault()
                     const id = link.href.replace('/#', '')
-                    // Small delay to allow the mobile menu to close before scrolling
                     setTimeout(() => {
-                      const el = document.getElementById(id)
-                      if (el) {
-                        const y = el.getBoundingClientRect().top + window.scrollY - 80
-                        window.scrollTo({ top: y, behavior: 'smooth' })
-                      }
+                      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
                       window.history.pushState(null, '', `/#${id}`)
                     }, 50)
                   }
