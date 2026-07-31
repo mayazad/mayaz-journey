@@ -121,7 +121,7 @@ insert into projects (
   'guildboard',
   'RPG-Themed Multi-Tenant Task Management Platform.',
   'Transform your team into a guild. Complete quests. Earn XP. Rise through the ranks.\n\n### Features\n- **Guild System:** Create or join a guild using invite codes. Full multi-tenant data isolation.\n- **RPG Mechanics:** Earn experience and level up by completing real-world tasks.\n- **Role-Based Access:** Built with secure RLS policies in Supabase.',
-  'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop',
+  'https://image.thum.io/get/width/1200/crop/800/https://guildboard-final.vercel.app',
   ARRAY['React 19', 'Supabase', 'Express.js', 'Node.js', 'Vercel'],
   'https://github.com/mayazad/guildboard-final',
   'https://guildboard-final.vercel.app',
