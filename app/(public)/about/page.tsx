@@ -37,14 +37,14 @@ export default async function AboutPage() {
             <div className="grid md:grid-cols-3 gap-10 items-start">
               {/* Photo */}
               <div className="flex justify-center md:justify-start">
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-indigo-500/20 shadow-xl shadow-indigo-500/10">
+                <div className="relative w-full max-w-[240px] aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-indigo-500/10">
                   {p?.profile_photo_url ? (
                     <Image
                       src={p.profile_photo_url}
                       alt={`${p.full_name} profile photo`}
                       fill
-                      sizes="224px"
-                      className="object-cover"
+                      sizes="(max-width: 768px) 240px, 280px"
+                      className="object-cover object-top"
                       priority
                     />
                   ) : (

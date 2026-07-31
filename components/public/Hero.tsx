@@ -148,14 +148,15 @@ export default function Hero({ profile }: { profile: Profile }) {
             <div className="relative">
               {/* Glow ring */}
               <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-indigo-500/30 via-violet-500/20 to-transparent blur-xl" />
-              <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-indigo-500/30 shadow-2xl shadow-indigo-500/20">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-96 lg:w-[340px] lg:h-[420px] rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 shadow-2xl shadow-indigo-500/20 backdrop-blur-sm transition-all duration-500 group">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 via-transparent to-transparent z-10" />
                 {profile.profile_photo_url ? (
                   <Image
                     src={profile.profile_photo_url}
                     alt={`${profile.full_name} profile photo`}
                     fill
-                    sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
-                    className="object-cover"
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 340px"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                     priority
                   />
                 ) : (
