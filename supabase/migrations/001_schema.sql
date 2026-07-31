@@ -111,43 +111,42 @@ insert into social_links (platform, url, display_order) values
   ('linkedin', 'https://www.linkedin.com/in/md-mayaz-ad/', 2)
 on conflict do nothing;
 
--- Sample featured projects (replace with real projects via admin panel)
+-- Sample featured projects
 insert into projects (
-  title, slug, short_description, long_description,
-  tech_stack, github_url, live_url,
-  achievements, is_featured, display_order
+  title, slug, short_description, long_description, cover_image_url,
+  tech_stack, github_url, live_url, is_featured, display_order
 ) values
 (
-  'Campus Buddy',
-  'campus-buddy',
-  'An AI-powered campus companion app with dual-model chat, course recommendations, and real-time campus information.',
-  'Campus Buddy is a full-stack platform built for university students. It features a dual-model AI chat system (VarsityAI + ExternalLLM), real-time campus event feeds, course recommendations, and an admin dashboard for content management. Built with Next.js, Supabase, and a custom LLM integration layer.',
-  ARRAY['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'OpenAI API'],
-  'https://github.com/mayazad',
-  null,
-  '[{"label": "AI response accuracy", "value": "94%"}, {"label": "Student users", "value": "200+"}]'::jsonb,
+  'GuildBoard',
+  'guildboard',
+  'RPG-Themed Multi-Tenant Task Management Platform.',
+  'Transform your team into a guild. Complete quests. Earn XP. Rise through the ranks.\n\n### Features\n- **Guild System:** Create or join a guild using invite codes. Full multi-tenant data isolation.\n- **RPG Mechanics:** Earn experience and level up by completing real-world tasks.\n- **Role-Based Access:** Built with secure RLS policies in Supabase.',
+  'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop',
+  ARRAY['React 19', 'Supabase', 'Express.js', 'Node.js', 'Vercel'],
+  'https://github.com/mayazad/guildboard-final',
+  'https://guildboard-final.vercel.app',
   true, 1
 ),
 (
-  'Mayaz Journey Portfolio',
-  'mayaz-journey',
-  'A recruiter-ready personal portfolio with a Supabase-backed admin panel for zero-code content updates.',
-  'A fully dynamic personal portfolio built with Next.js 14 App Router, TypeScript, Tailwind CSS, and Supabase. Features a database-backed admin panel where the owner can update profile info, manage projects, and view contact messages — all without touching code.',
-  ARRAY['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Framer Motion', 'shadcn/ui'],
-  'https://github.com/mayazad/mayaz-journey',
+  'FloatBook AI',
+  'floatbook-ai',
+  'A modern, transparent, always-on-top AI notebook for study assistance.',
+  'FloatBook is a modern, transparent, always-on-top AI notebook designed for seamless study assistance and note-taking. \n\nIt features a unique "Floating Orb" interface that stays out of your way until you need it.\n\n### Architecture\nThis project uses a secure dual-process architecture:\n1. **The Brain (Proxy Server):** Runs an Express server to handle Google Gemini API calls securely.\n2. **The Body (Electron App):** The visual window that you interact with.\n\n### Features\n- AI Tutor (Gemini Flash)\n- Contextual Awareness\n- Markdown Support\n- Screen Capture',
+  'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+  ARRAY['Electron', 'Express', 'JavaScript', 'Google Gemini AI', 'Markdown'],
+  'https://github.com/mayazad/floatBOOK',
   null,
-  '[{"label": "Lighthouse score", "value": "95+"}, {"label": "Deploy time", "value": "< 30s"}]'::jsonb,
   true, 2
 ),
 (
-  'Full-Stack Web Project',
-  'fullstack-web-project',
-  'A complete web application with authentication, real-time database, and responsive UI.',
-  'A robust full-stack web application built with modern tooling. Features include user authentication, a real-time PostgreSQL database, RESTful API design, and a clean, accessible frontend.',
-  ARRAY['React', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS'],
-  'https://github.com/mayazad',
+  'Pomodoro Timer',
+  'pomodoro-timer',
+  'A beautiful Pomodoro timer built with Python and Tkinter.',
+  'A productivity tracker built in Python. Designed to keep focus during long deep-learning training sessions or heavy coding blocks.\n\n### Features\n- Dark mode / Light mode toggle\n- Custom session names\n- Daily progress tracking via CSV data logging\n- Weekly productivity charts plotted with Matplotlib',
+  'https://images.unsplash.com/photo-1495364141860-b0d03eccd065?q=80&w=2076&auto=format&fit=crop',
+  ARRAY['Python', 'Tkinter', 'Matplotlib', 'CSV'],
+  'https://github.com/mayazad/pomodoro-python-ad',
   null,
-  '[{"label": "API response time", "value": "< 120ms"}, {"label": "Test coverage", "value": "85%"}]'::jsonb,
   true, 3
 )
 on conflict (slug) do nothing;
