@@ -90,15 +90,13 @@ insert into profile (
   github_url, linkedin_url, profile_photo_url, resume_url
 ) values (
   'Md Adnan Hossain Mayaz',
-  'Full-Stack Developer building fast, reliable web apps',
-  'Computer Science student and full-stack developer passionate about building impactful digital products with modern web technologies.',
-  'I''m Md Adnan Hossain Mayaz, a Computer Science student and full-stack developer based in Bangladesh. I enjoy turning complex problems into elegant, user-friendly software.
+  'AI Engineer building intelligent models and machine learning systems',
+  'Computer Science student and AI Engineer passionate about machine learning, deep learning, and building data-driven intelligent solutions.',
+  'I''m Md Adnan Hossain Mayaz, an AI Engineer based in Bangladesh. I specialize in Artificial Intelligence, Machine Learning, and Deep Learning.
 
-I specialize in building full-stack web applications with technologies like Next.js, React, Node.js, and PostgreSQL. I have hands-on experience designing database schemas, building REST APIs, and crafting polished frontends that perform well and look great.
+I have strong hands-on expertise with Python and core data science libraries like NumPy and Pandas. My technical focus revolves around building and training advanced models using TensorFlow, and developing computer vision solutions such as the YOLO object detection model.
 
-When I''m not coding, I''m exploring open-source projects, contributing to team-based software builds, and staying up to date with the latest in web development and AI.
-
-I believe in clean code, thoughtful design, and shipping products that genuinely help people.',
+I love diving deep into data, training complex neural networks, and creating AI-driven applications that solve real-world problems. When I''m not training models, I''m keeping up with the latest AI research, contributing to projects, and constantly pushing myself to learn new techniques in this rapidly evolving field.',
   'officialmayazad@gmail.com',
   null,
   'Bangladesh',
