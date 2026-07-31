@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import Navbar from '@/components/public/Navbar'
 import Hero from '@/components/public/Hero'
 import AboutSection from '@/components/public/AboutSection'
+import EducationSection from '@/components/public/EducationSection'
 import FeaturedProjects from '@/components/public/FeaturedProjects'
 import ContactSection from '@/components/public/ContactSection'
 import Footer from '@/components/public/Footer'
@@ -26,21 +27,22 @@ export default async function HomePage() {
   if (!profile) {
     return (
       <div className="min-h-screen flex items-center justify-center text-slate-400">
-        <p>Portfolio is being set up. Check back soon!</p>
+        Database not connected or profile not found.
       </div>
     )
   }
 
   return (
-    <>
+    <div className="relative min-h-screen overflow-hidden selection:bg-indigo-500/30 selection:text-indigo-200">
       <Navbar />
       <main>
         <Hero profile={profile} />
         <AboutSection profile={profile} />
+        <EducationSection />
         <FeaturedProjects projects={projects} />
         <ContactSection profile={profile} />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
