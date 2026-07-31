@@ -40,8 +40,8 @@ export default async function HomePage() {
         <Hero profile={profile} />
         <AboutSection profile={profile} />
         <EducationSection />
-        <GitHubStats />
         <FeaturedProjects projects={projects} />
+        <GitHubStats />
         <ContactSection profile={profile} />
       </main>
       <Footer />
