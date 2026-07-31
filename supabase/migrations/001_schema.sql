@@ -91,7 +91,7 @@ insert into profile (
 ) values (
   'Md Adnan Hossain Mayaz',
   'AI Engineer building intelligent models and machine learning systems',
-  'Computer Science student and AI Engineer passionate about machine learning, deep learning, and building data-driven intelligent solutions.',
+  'Software Engineering student majoring in DS and AI Engineer passionate about machine learning, deep learning, and building data-driven intelligent solutions.',
   'I''m Md Adnan Hossain Mayaz, an AI Engineer based in Bangladesh. I specialize in Artificial Intelligence, Machine Learning, and Deep Learning.
 
 I have strong hands-on expertise with Python and core data science libraries like NumPy and Pandas. My technical focus revolves around building and training advanced models using TensorFlow, and developing computer vision solutions such as the YOLO object detection model.
