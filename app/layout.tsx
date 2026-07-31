@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} overflow-x-hidden`}>
       <body className="font-inter antialiased bg-[#0a0a0f] text-white overflow-x-hidden">
         {children}
       </body>
