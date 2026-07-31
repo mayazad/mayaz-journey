@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '@/components/icons/SocialIcons'
 
@@ -33,9 +34,19 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-outfit text-xl font-bold text-white hover:text-indigo-400 transition-colors"
+          className="flex items-center gap-2 group"
         >
-          Mayaz<span className="text-indigo-500">.</span>
+          <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-indigo-500/30 group-hover:border-indigo-400 transition-colors">
+            <Image 
+              src="/logo.png" 
+              alt="Mayaz Logo" 
+              fill 
+              className="object-cover"
+            />
+          </div>
+          <span className="font-outfit text-xl font-bold tracking-wide text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-violet-400 transition-all duration-300">
+            Mayaz
+          </span>
         </Link>
 
         {/* Desktop nav */}
