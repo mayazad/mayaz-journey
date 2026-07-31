@@ -6,8 +6,8 @@ import ProjectCard from '@/components/public/ProjectCard'
 import type { Project } from '@/types'
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'A showcase of full-stack web projects built by Md Adnan Hossain Mayaz.',
+  title: 'Projects | Mayaz',
+  description: 'A showcase of AI, machine learning, and software projects built by Md Adnan Hossain Mayaz.',
 }
 
 export default async function ProjectsPage() {
