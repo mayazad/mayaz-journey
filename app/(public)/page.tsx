@@ -3,6 +3,7 @@ import Navbar from '@/components/public/Navbar'
 import Hero from '@/components/public/Hero'
 import AboutSection from '@/components/public/AboutSection'
 import EducationSection from '@/components/public/EducationSection'
+import GitHubStats from '@/components/public/GitHubStats'
 import FeaturedProjects from '@/components/public/FeaturedProjects'
 import ContactSection from '@/components/public/ContactSection'
 import Footer from '@/components/public/Footer'
@@ -39,6 +40,7 @@ export default async function HomePage() {
         <Hero profile={profile} />
         <AboutSection profile={profile} />
         <EducationSection />
+        <GitHubStats />
         <FeaturedProjects projects={projects} />
         <ContactSection profile={profile} />
       </main>
