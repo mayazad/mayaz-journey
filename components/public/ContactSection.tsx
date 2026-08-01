@@ -8,7 +8,7 @@ import type { Profile } from '@/types'
 
 export default function ContactSection({ profile }: { profile: Profile }) {
   return (
-    <section id="contact" className="py-24 lg:py-32 relative scroll-mt-16">
+    <section id="contact" className="pt-20 pb-24 lg:pb-32 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-60 bg-indigo-600/8 blur-[100px]" />
       </div>
